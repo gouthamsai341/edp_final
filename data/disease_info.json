@@ -1,0 +1,337 @@
+{
+  "Apple___Apple_scab": {
+    "plant": "Apple",
+    "disease": "Apple Scab",
+    "description": "A common fungal disease caused by Venturia inaequalis that affects apple leaves and fruit, especially in cool, wet spring weather.",
+    "symptoms": [
+      "Olive-green to brown velvety spots on leaves",
+      "Dark, scabby lesions on fruit surface",
+      "Premature leaf yellowing and drop"
+    ],
+    "management": [
+      "Remove and destroy fallen leaves to reduce fungal spores overwintering",
+      "Apply fungicide on a preventive schedule during wet spring conditions",
+      "Prune to improve air circulation within the canopy"
+    ],
+    "prevention": [
+      "Plant scab-resistant apple varieties where possible",
+      "Avoid overhead irrigation that keeps foliage wet",
+      "Maintain good orchard sanitation each season"
+    ]
+  },
+  "Apple___Black_rot": {
+    "plant": "Apple",
+    "disease": "Black Rot",
+    "description": "A fungal disease (Botryosphaeria obtusa) that can affect apple leaves, fruit, and bark, often entering through wounds or dead wood.",
+    "symptoms": [
+      "Purple-bordered brown spots on leaves ('frog-eye leaf spot')",
+      "Rotting, mummified fruit with concentric rings",
+      "Cankers on branches"
+    ],
+    "management": [
+      "Prune out dead or cankered wood during dormant season",
+      "Remove mummified fruit from the tree and ground",
+      "Apply fungicide following local extension guidance"
+    ],
+    "prevention": [
+      "Avoid tree stress from drought or poor nutrition",
+      "Sanitize pruning tools between cuts",
+      "Remove nearby wild or abandoned apple trees that can harbor infection"
+    ]
+  },
+  "Apple___Cedar_apple_rust": {
+    "plant": "Apple",
+    "disease": "Cedar Apple Rust",
+    "description": "A fungal disease requiring both apple/crabapple and juniper/cedar hosts to complete its life cycle.",
+    "symptoms": [
+      "Bright yellow-orange spots on upper leaf surface",
+      "Small raised structures on the underside of leaves",
+      "Premature defoliation in severe cases"
+    ],
+    "management": [
+      "Apply fungicide in spring when spores are released from cedar galls",
+      "Remove nearby juniper/cedar hosts if practical"
+    ],
+    "prevention": [
+      "Plant rust-resistant apple cultivars",
+      "Increase physical distance between apple trees and juniper/cedar plants"
+    ]
+  },
+  "Apple___healthy": {
+    "plant": "Apple",
+    "disease": "Healthy",
+    "description": "No visible signs of disease were detected on this apple leaf.",
+    "symptoms": [],
+    "management": [],
+    "prevention": [
+      "Continue routine monitoring for early signs of pests or disease",
+      "Maintain balanced watering and fertilization"
+    ]
+  },
+  "Corn___Common_rust": {
+    "plant": "Corn (Maize)",
+    "disease": "Common Rust",
+    "description": "A fungal disease caused by Puccinia sorghi that produces characteristic rust-colored pustules on corn leaves.",
+    "symptoms": [
+      "Small, cinnamon-brown, raised pustules on both leaf surfaces",
+      "Pustules may turn dark brown to black as leaves mature"
+    ],
+    "management": [
+      "Apply foliar fungicide if infection is severe and detected early",
+      "Monitor fields regularly during humid weather"
+    ],
+    "prevention": [
+      "Plant rust-resistant corn hybrids",
+      "Avoid excessive nitrogen fertilization which can increase susceptibility"
+    ]
+  },
+  "Corn___Northern_Leaf_Blight": {
+    "plant": "Corn (Maize)",
+    "disease": "Northern Leaf Blight",
+    "description": "A fungal disease caused by Exserohilum turcicum, producing long, cigar-shaped lesions on corn leaves.",
+    "symptoms": [
+      "Long, elliptical, gray-green to tan lesions on leaves",
+      "Lesions can merge, causing large areas of dead tissue"
+    ],
+    "management": [
+      "Apply fungicide when disease pressure is high and weather favors spread",
+      "Rotate crops to reduce residue-borne inoculum"
+    ],
+    "prevention": [
+      "Use resistant hybrids",
+      "Till under or manage crop residue after harvest"
+    ]
+  },
+  "Corn___healthy": {
+    "plant": "Corn (Maize)",
+    "disease": "Healthy",
+    "description": "No visible signs of disease were detected on this corn leaf.",
+    "symptoms": [],
+    "management": [],
+    "prevention": [
+      "Continue routine scouting during the growing season",
+      "Maintain proper spacing and nutrition"
+    ]
+  },
+  "Potato___Early_blight": {
+    "plant": "Potato",
+    "disease": "Early Blight",
+    "description": "A fungal disease caused by Alternaria solani, common in warm, humid conditions and typically starting on older leaves.",
+    "symptoms": [
+      "Dark brown spots with concentric rings ('target spot' pattern)",
+      "Yellowing of tissue surrounding lesions",
+      "Lower/older leaves affected first"
+    ],
+    "management": [
+      "Apply fungicide at first sign of disease, following label instructions",
+      "Remove and dispose of heavily infected foliage"
+    ],
+    "prevention": [
+      "Rotate crops with non-solanaceous plants",
+      "Avoid overhead watering; water at soil level",
+      "Ensure adequate plant spacing for airflow"
+    ]
+  },
+  "Potato___Late_blight": {
+    "plant": "Potato",
+    "disease": "Late Blight",
+    "description": "A historically significant and highly destructive disease caused by Phytophthora infestans, capable of rapidly destroying a crop in favorable conditions.",
+    "symptoms": [
+      "Water-soaked, dark green to brown lesions on leaves",
+      "White fungal growth on the underside of leaves in humid conditions",
+      "Rapid collapse and blackening of foliage"
+    ],
+    "management": [
+      "Apply appropriate fungicide promptly; late blight can spread very quickly",
+      "Remove and destroy infected plants to limit spread"
+    ],
+    "prevention": [
+      "Use certified disease-free seed potatoes",
+      "Avoid excess overhead irrigation and prolonged leaf wetness",
+      "Monitor local disease-forecasting networks where available"
+    ]
+  },
+  "Potato___healthy": {
+    "plant": "Potato",
+    "disease": "Healthy",
+    "description": "No visible signs of disease were detected on this potato leaf.",
+    "symptoms": [],
+    "management": [],
+    "prevention": [
+      "Continue routine field scouting",
+      "Practice regular crop rotation"
+    ]
+  },
+  "Tomato___Bacterial_spot": {
+    "plant": "Tomato",
+    "disease": "Bacterial Spot",
+    "description": "A bacterial disease (Xanthomonas spp.) that affects tomato leaves, stems, and fruit, spreading readily in warm, wet conditions.",
+    "symptoms": [
+      "Small, water-soaked spots that turn dark brown/black",
+      "Spots may have a yellow halo",
+      "Fruit can develop raised, scab-like lesions"
+    ],
+    "management": [
+      "Apply copper-based bactericide where appropriate and permitted",
+      "Avoid working in fields when foliage is wet"
+    ],
+    "prevention": [
+      "Use certified disease-free seed and transplants",
+      "Rotate crops and avoid overhead irrigation"
+    ]
+  },
+  "Tomato___Early_blight": {
+    "plant": "Tomato",
+    "disease": "Early Blight",
+    "description": "A fungal disease caused by Alternaria solani that commonly affects tomato foliage, stems, and fruit.",
+    "symptoms": [
+      "Brown spots with concentric rings, often on lower leaves first",
+      "Yellowing around lesions",
+      "Possible stem lesions near the soil line"
+    ],
+    "management": [
+      "Remove affected lower leaves promptly",
+      "Apply fungicide following label guidance"
+    ],
+    "prevention": [
+      "Stake or cage plants to improve air circulation",
+      "Mulch to reduce soil splash onto lower leaves",
+      "Rotate crops annually"
+    ]
+  },
+  "Tomato___Late_blight": {
+    "plant": "Tomato",
+    "disease": "Late Blight",
+    "description": "A fast-spreading disease caused by Phytophthora infestans, the same pathogen responsible for potato late blight.",
+    "symptoms": [
+      "Large, irregular, water-soaked lesions on leaves",
+      "White mold growth on leaf undersides in humid weather",
+      "Firm, dark, greasy-looking lesions on fruit"
+    ],
+    "management": [
+      "Remove and destroy infected plant material immediately",
+      "Apply fungicide promptly; disease can spread within days"
+    ],
+    "prevention": [
+      "Avoid planting near infected potato crops",
+      "Improve air circulation and avoid prolonged leaf wetness"
+    ]
+  },
+  "Tomato___Leaf_Mold": {
+    "plant": "Tomato",
+    "disease": "Leaf Mold",
+    "description": "A fungal disease (Passalora fulva) especially common in greenhouse tomatoes with high humidity.",
+    "symptoms": [
+      "Pale green to yellow spots on upper leaf surface",
+      "Olive-green to grayish-purple fuzzy mold on the underside"
+    ],
+    "management": [
+      "Improve ventilation to reduce humidity",
+      "Apply fungicide if conditions favor disease spread"
+    ],
+    "prevention": [
+      "Space plants adequately",
+      "Avoid overhead watering in enclosed/greenhouse settings"
+    ]
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "plant": "Tomato",
+    "disease": "Septoria Leaf Spot",
+    "description": "A fungal disease caused by Septoria lycopersici that produces many small spots, typically starting on lower leaves.",
+    "symptoms": [
+      "Numerous small, circular spots with dark borders and gray centers",
+      "Tiny black fruiting bodies visible within spots",
+      "Progressive yellowing and leaf drop from the bottom up"
+    ],
+    "management": [
+      "Remove infected lower leaves",
+      "Apply fungicide as needed, especially in wet seasons"
+    ],
+    "prevention": [
+      "Rotate crops and avoid planting tomatoes in the same soil yearly",
+      "Mulch and avoid overhead watering"
+    ]
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "plant": "Tomato",
+    "disease": "Two-Spotted Spider Mite Damage",
+    "description": "Damage caused by a tiny arachnid pest rather than a pathogen, common in hot, dry conditions.",
+    "symptoms": [
+      "Fine yellow stippling/speckling on leaves",
+      "Fine webbing on the underside of leaves in heavy infestations",
+      "Leaves may bronze and dry out"
+    ],
+    "management": [
+      "Rinse plants with water to dislodge mites",
+      "Use insecticidal soap or miticide where appropriate"
+    ],
+    "prevention": [
+      "Avoid drought stress; mites thrive in dry conditions",
+      "Encourage natural predators such as predatory mites"
+    ]
+  },
+  "Tomato___Target_Spot": {
+    "plant": "Tomato",
+    "disease": "Target Spot",
+    "description": "A fungal disease caused by Corynespora cassiicola producing target-like concentric lesions.",
+    "symptoms": [
+      "Brown lesions with concentric ring patterns, similar to early blight",
+      "Can affect leaves, stems, and fruit"
+    ],
+    "management": [
+      "Apply fungicide following local guidance",
+      "Remove severely infected foliage"
+    ],
+    "prevention": [
+      "Ensure good airflow and avoid leaf wetness",
+      "Rotate crops"
+    ]
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "plant": "Tomato",
+    "disease": "Tomato Yellow Leaf Curl Virus",
+    "description": "A viral disease transmitted primarily by whiteflies, causing significant yield loss in warm climates.",
+    "symptoms": [
+      "Upward curling and yellowing of leaves",
+      "Stunted plant growth",
+      "Reduced fruit set"
+    ],
+    "management": [
+      "Control whitefly populations with appropriate methods",
+      "Remove and destroy infected plants to reduce virus reservoirs"
+    ],
+    "prevention": [
+      "Use virus-resistant tomato varieties where available",
+      "Use reflective mulches or physical barriers to deter whiteflies"
+    ]
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "plant": "Tomato",
+    "disease": "Tomato Mosaic Virus",
+    "description": "A highly stable and easily spread virus causing mottled foliage and reduced fruit quality.",
+    "symptoms": [
+      "Light and dark green mottled pattern on leaves",
+      "Leaf distortion and stunted growth",
+      "Occasionally mottled or distorted fruit"
+    ],
+    "management": [
+      "Remove and destroy infected plants",
+      "Disinfect tools and hands, as the virus spreads easily by contact"
+    ],
+    "prevention": [
+      "Use certified virus-free seed",
+      "Avoid handling healthy plants after touching infected ones"
+    ]
+  },
+  "Tomato___healthy": {
+    "plant": "Tomato",
+    "disease": "Healthy",
+    "description": "No visible signs of disease were detected on this tomato leaf.",
+    "symptoms": [],
+    "management": [],
+    "prevention": [
+      "Continue routine monitoring",
+      "Maintain balanced watering and fertilization"
+    ]
+  }
+}

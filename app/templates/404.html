@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Page Not Found - PlantCare AI{% endblock %}
+{% block content %}
+<div class="card" style="text-align:center; max-width:500px; margin:40px auto;">
+  <h1 style="color:var(--green-900);">404</h1>
+  <p>The page you're looking for doesn't exist.</p>
+  <a class="btn" href="{{ url_for('disease.home_page') }}">Go Home</a>
+</div>
+{% endblock %}

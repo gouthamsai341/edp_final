@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Detect Disease - PlantCare AI{% endblock %}
+{% block content %}
+<h1 class="section-title">Detect Plant Disease</h1>
+<div class="card" style="max-width:640px; margin:0 auto;">
+  <div class="upload-box" id="uploadBox">
+    <p><strong>Drag & Drop</strong> your leaf image here</p>
+    <p>or</p>
+    <button type="button" class="btn btn-secondary" onclick="document.getElementById('fileInput').click()">Choose Image</button>
+    <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.webp" style="display:none;">
+    <img id="imagePreview" alt="Preview of uploaded leaf">
+  </div>
+
+  <div style="text-align:center; margin-top:24px;">
+    <button id="analyzeBtn" class="btn" disabled>Analyze Disease</button>
+    <div class="spinner" id="spinner"></div>
+    <p class="status-message" id="statusMessage"></p>
+  </div>
+</div>
+{% endblock %}

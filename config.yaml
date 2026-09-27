@@ -1,0 +1,72 @@
+# =========================================================
+# PlantCare AI - Central Configuration
+# Every script and the Flask app reads from this single file
+# so settings are never duplicated or hard-coded.
+# =========================================================
+
+random_seed: 42
+
+paths:
+  raw_dataset: "data/raw"
+  cleaned_dataset: "data/cleaned"
+  quarantine_dir: "data/quarantine"
+  split_dataset: "data/split"          # created by src/split_dataset.py -> train/ val/ test/
+  external_test: "data/external_test"
+  reports_dir: "reports"
+  models_dir: "models"
+  disease_info: "data/disease_info.json"
+  class_names_file: "models/class_names.json"
+  cnn_model_path: "models/cnn_baseline.keras"
+  best_model_path: "models/best_plant_disease_model.keras"
+  tflite_model_path: "models/plant_disease_model.tflite"
+  upload_dir: "uploads"
+  database_path: "instance/database.db"
+
+image:
+  size: [224, 224]      # H x W, matches EfficientNetB0 input
+  channels: 3
+
+split:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+cleaning:
+  min_width: 32
+  min_height: 32
+  allowed_extensions: [".jpg", ".jpeg", ".png", ".webp"]
+  duplicate_hash_size: 8          # perceptual hash size
+  duplicate_hamming_threshold: 4  # <= this distance => considered duplicate
+
+augmentation:
+  horizontal_flip: true
+  rotation_range_deg: 15
+  zoom_range: 0.1
+  translation_range: 0.1
+  contrast_range: 0.1
+
+training:
+  batch_size: 32
+  epochs_cnn: 30
+  epochs_head: 15          # EfficientNet head-training stage
+  epochs_finetune: 15      # EfficientNet fine-tuning stage
+  learning_rate_cnn: 0.001
+  learning_rate_head: 0.001
+  learning_rate_finetune: 0.00001
+  early_stopping_patience: 6
+  reduce_lr_patience: 3
+  reduce_lr_factor: 0.5
+  fine_tune_unfreeze_layers: 40   # number of top backbone layers to unfreeze
+
+inference:
+  confidence_threshold: 0.60   # NOT scientifically tuned - adjust after validation analysis
+
+upload:
+  allowed_extensions: [".jpg", ".jpeg", ".png", ".webp"]
+  max_size_mb: 8
+
+flask:
+  secret_key_env_var: "PLANTCARE_SECRET_KEY"   # set via environment variable, never hard-coded
+  debug: false
+  host: "0.0.0.0"
+  port: 5000

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Analysis Result - PlantCare AI{% endblock %}
+{% block content %}
+<h1 class="section-title">Analysis Result</h1>
+<div id="resultRoot" class="card result-card">
+  <img id="resultImage" class="result-image" alt="Analyzed leaf">
+
+  <p>Detected Plant</p>
+  <h2 id="resultPlant" style="color:var(--green-900); margin-top:0;">-</h2>
+
+  <p>Detected Disease</p>
+  <h2 id="resultDisease" style="color:var(--green-900); margin-top:0;">-</h2>
+
+  <p>Confidence: <strong id="resultConfidenceText">-</strong></p>
+  <div class="confidence-bar-track">
+    <div class="confidence-bar-fill" id="confidenceBarFill" style="width:0%;"></div>
+  </div>
+
+  <div class="info-block">
+    <h3>Disease Information</h3>
+    <p id="descriptionText">-</p>
+  </div>
+
+  <div class="info-block">
+    <h3>Symptoms</h3>
+    <ul id="symptomsList"><li>-</li></ul>
+  </div>
+
+  <div class="info-block">
+    <h3>Recommended Management</h3>
+    <ul id="managementList"><li>-</li></ul>
+  </div>
+
+  <div class="info-block">
+    <h3>Prevention</h3>
+    <ul id="preventionList"><li>-</li></ul>
+  </div>
+
+  <p style="margin-top:24px; font-size:0.85rem; color:var(--gray-500);">
+    This prediction is AI-generated and depends on the model's training data.
+    It is not a substitute for expert agricultural diagnosis.
+  </p>
+
+  <a class="btn" href="{{ url_for('prediction.detect_page') }}" style="margin-top:10px; display:inline-block;">Analyze Another Image</a>
+</div>
+{% endblock %}

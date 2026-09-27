@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Server Error - PlantCare AI{% endblock %}
+{% block content %}
+<div class="card" style="text-align:center; max-width:500px; margin:40px auto;">
+  <h1 style="color:var(--green-900);">Something went wrong</h1>
+  <p>We hit an unexpected error. Please try again in a moment.</p>
+  <a class="btn" href="{{ url_for('disease.home_page') }}">Go Home</a>
+</div>
+{% endblock %}

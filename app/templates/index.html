@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}PlantCare AI - Intelligent Plant Disease Detection{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>🌱 PlantCare AI</h1>
+  <p>Detect plant diseases from leaf images using AI.</p>
+  <a class="btn" href="{{ url_for('prediction.detect_page') }}">Start Detection</a>
+</section>
+
+<h2 class="section-title">How it works</h2>
+<div class="grid">
+  <div class="card">
+    <h3>1. Upload</h3>
+    <p>Take or upload a clear photo of a single plant leaf.</p>
+  </div>
+  <div class="card">
+    <h3>2. Analyze</h3>
+    <p>A trained deep-learning model examines the leaf for visual disease patterns.</p>
+  </div>
+  <div class="card">
+    <h3>3. Learn</h3>
+    <p>Get the predicted disease, confidence score, symptoms, and management guidance.</p>
+  </div>
+</div>
+
+<h2 class="section-title">Supported plants</h2>
+<div class="grid">
+  <div class="card"><h3>🍎 Apple</h3><p>Scab, Black Rot, Cedar Apple Rust, and healthy leaves.</p></div>
+  <div class="card"><h3>🌽 Corn</h3><p>Common Rust, Northern Leaf Blight, and healthy leaves.</p></div>
+  <div class="card"><h3>🥔 Potato</h3><p>Early Blight, Late Blight, and healthy leaves.</p></div>
+  <div class="card"><h3>🍅 Tomato</h3><p>Multiple fungal, bacterial, and viral diseases, and healthy leaves.</p></div>
+</div>
+
+<h2 class="section-title">The AI technology</h2>
+<div class="card" style="margin-bottom:40px;">
+  <p>PlantCare AI is built on a deep convolutional neural network, using transfer learning
+  from EfficientNetB0, trained on a cleaned and stratified split of a PlantVillage-style
+  leaf image dataset. Every prediction includes a confidence score, and low-confidence
+  predictions are clearly flagged as uncertain rather than guessed.</p>
+</div>
+
+<h2 class="section-title">Benefits</h2>
+<div class="grid">
+  <div class="card"><h3>Fast</h3><p>Get a result in seconds from a single photo.</p></div>
+  <div class="card"><h3>Educational</h3><p>Learn about symptoms, causes, and management for common leaf diseases.</p></div>
+  <div class="card"><h3>Transparent</h3><p>Confidence scores and uncertainty handling, not blind guesses.</p></div>
+</div>
+{% endblock %}

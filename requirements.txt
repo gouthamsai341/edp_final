@@ -1,0 +1,20 @@
+# --- Web backend ---
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+Werkzeug==3.0.4
+
+# --- ML / data ---
+tensorflow==2.16.1
+numpy==1.26.4
+pandas==2.2.2
+Pillow==10.4.0
+scikit-learn==1.5.1
+matplotlib==3.9.1
+imagehash==4.3.1
+
+# --- Config / utils ---
+PyYAML==6.0.2
+python-dotenv==1.0.1
+
+# --- Testing ---
+pytest==8.3.2

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ disease.disease }} - PlantCare AI{% endblock %}
+{% block content %}
+<a href="{{ url_for('disease.library_page') }}">&larr; Back to Disease Library</a>
+<div class="card" style="max-width:700px; margin-top:20px;">
+  <div class="plant-tag">{{ disease.plant }}</div>
+  <h1 style="color:var(--green-900); margin-top:4px;">{{ disease.disease }}</h1>
+  <p>{{ disease.description }}</p>
+
+  <div class="info-block">
+    <h3>Symptoms</h3>
+    <ul>{% for s in disease.symptoms %}<li>{{ s }}</li>{% else %}<li>No symptoms listed.</li>{% endfor %}</ul>
+  </div>
+
+  <div class="info-block">
+    <h3>Recommended Management</h3>
+    <ul>{% for m in disease.management %}<li>{{ m }}</li>{% else %}<li>No management information listed.</li>{% endfor %}</ul>
+  </div>
+
+  <div class="info-block">
+    <h3>Prevention</h3>
+    <ul>{% for p in disease.prevention %}<li>{{ p }}</li>{% else %}<li>No prevention information listed.</li>{% endfor %}</ul>
+  </div>
+</div>
+{% endblock %}

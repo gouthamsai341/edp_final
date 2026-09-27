@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}About - PlantCare AI{% endblock %}
+{% block content %}
+<h1 class="section-title">About This Project</h1>
+<div class="card" style="margin-bottom:20px;">
+  <h3>Objective</h3>
+  <p>PlantCare AI is an EDP (Experiential/Entrepreneurial Development Program) AI/ML internship
+  project. It uses computer vision to identify plant diseases from leaf images and provide
+  actionable, general information about symptoms and management.</p>
+</div>
+
+<div class="card" style="margin-bottom:20px;">
+  <h3>Dataset</h3>
+  <p>The model is trained on a PlantVillage-style leaf-image dataset, organized by plant and
+  disease class, cleaned to remove corrupt/duplicate images before a stratified train/validation/test
+  split.</p>
+</div>
+
+<div class="card" style="margin-bottom:20px;">
+  <h3>Model</h3>
+  <p>Two models are built and compared: a custom convolutional neural network (CNN) baseline, and a
+  transfer-learning model built on EfficientNetB0 (fine-tuned on the dataset). The better-performing
+  model, based on real held-out test metrics, is used for predictions in this app.</p>
+</div>
+
+<div class="card" style="margin-bottom:20px;">
+  <h3>Evaluation</h3>
+  <p>Accuracy, precision, recall, and F1-score are calculated per class on a held-out test set, with
+  a confusion matrix and error analysis to identify commonly confused diseases.</p>
+</div>
+
+<div class="card">
+  <h3>Team</h3>
+  <ul class="team-list">
+    <li>Potlacheruvu Goutham</li>
+    <li>Mohd Ibrahim</li>
+    <li>Diguva Sarvajeeth Kumar</li>
+  </ul>
+  <p style="margin-top:10px;">EDP AI/ML Internship</p>
+</div>
+{% endblock %}

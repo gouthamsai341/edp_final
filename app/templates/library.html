@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Disease Library - PlantCare AI{% endblock %}
+{% block content %}
+<h1 class="section-title">Disease Library</h1>
+<div class="search-bar">
+  <input type="text" id="librarySearch" placeholder="Search by plant or disease name...">
+</div>
+<div class="grid">
+  {% for class_id, info in diseases.items() %}
+  <div class="disease-card-wrap" data-search="{{ (info.plant ~ ' ' ~ info.disease) | lower }}">
+    <a class="card disease-card" href="{{ url_for('disease.disease_detail_page', class_id=class_id) }}">
+      <div class="plant-tag">{{ info.plant }}</div>
+      <h3>{{ info.disease }}</h3>
+      <p>{{ info.description }}</p>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

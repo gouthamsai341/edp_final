@@ -1,0 +1,239 @@
+:root {
+  --green-900: #1b4332;
+  --green-700: #2d6a4f;
+  --green-500: #40916c;
+  --green-300: #95d5b2;
+  --green-100: #eafaf1;
+  --white: #ffffff;
+  --gray-700: #495057;
+  --gray-500: #868e96;
+  --gray-200: #e9ecef;
+  --red-500: #d9534f;
+  --amber-500: #e6a635;
+  --radius: 14px;
+  --shadow: 0 4px 16px rgba(27, 67, 50, 0.08);
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--gray-700);
+  background: var(--green-100);
+  line-height: 1.55;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a { color: var(--green-700); text-decoration: none; }
+a:hover { color: var(--green-900); }
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--green-900);
+}
+
+.brand span { color: var(--green-700); }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--green-900);
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 16px 0 0;
+  }
+  .nav-links.open { display: flex; }
+  .navbar { flex-wrap: wrap; }
+}
+
+/* ---------- Layout ---------- */
+.page-content { padding: 40px 20px 60px; min-height: 60vh; }
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, var(--green-100), var(--white));
+  border-radius: var(--radius);
+  margin-bottom: 40px;
+}
+
+.hero h1 { font-size: 2.4rem; color: var(--green-900); margin-bottom: 10px; }
+.hero p { font-size: 1.15rem; color: var(--gray-700); margin-bottom: 28px; }
+
+.btn {
+  display: inline-block;
+  background: var(--green-700);
+  color: var(--white);
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+.btn:hover { background: var(--green-900); color: var(--white); }
+.btn:disabled { background: var(--gray-500); cursor: not-allowed; }
+.btn-secondary {
+  background: var(--white);
+  color: var(--green-700);
+  border: 2px solid var(--green-500);
+}
+.btn-secondary:hover { background: var(--green-100); color: var(--green-900); }
+
+/* ---------- Cards / grids ---------- */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: var(--green-900);
+  margin-bottom: 18px;
+}
+
+/* ---------- Upload / Detect page ---------- */
+.upload-box {
+  border: 2px dashed var(--green-500);
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 50px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.upload-box.dragover { background: var(--green-100); }
+.upload-box p { margin: 10px 0; color: var(--gray-500); }
+#imagePreview {
+  max-width: 100%;
+  max-height: 340px;
+  border-radius: var(--radius);
+  margin-top: 20px;
+  display: none;
+}
+
+.status-message { margin-top: 16px; font-weight: 600; }
+.status-message.error { color: var(--red-500); }
+.status-message.uncertain { color: var(--amber-500); }
+.status-message.success { color: var(--green-700); }
+
+.spinner {
+  display: none;
+  margin: 20px auto 0;
+  width: 34px; height: 34px;
+  border: 4px solid var(--green-100);
+  border-top-color: var(--green-700);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Result page ---------- */
+.result-card { max-width: 640px; margin: 0 auto; }
+.result-image { width: 100%; max-height: 320px; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px; }
+.confidence-bar-track {
+  width: 100%; height: 12px; background: var(--gray-200);
+  border-radius: 999px; overflow: hidden; margin: 8px 0 20px;
+}
+.confidence-bar-fill { height: 100%; background: var(--green-500); }
+.info-block { margin-top: 20px; }
+.info-block h3 { color: var(--green-900); margin-bottom: 6px; }
+.info-block ul { margin: 0; padding-left: 20px; }
+
+/* ---------- Tables ---------- */
+table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: var(--radius); overflow: hidden; }
+th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--gray-200); }
+th { background: var(--green-100); color: var(--green-900); }
+.table-wrap { overflow-x: auto; }
+
+/* ---------- Badges ---------- */
+.badge { padding: 3px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+.badge-success { background: #d8f3dc; color: var(--green-900); }
+.badge-uncertain { background: #fff3cd; color: #856404; }
+.badge-error { background: #f8d7da; color: #842029; }
+
+/* ---------- Disease library ---------- */
+.disease-card { display: flex; flex-direction: column; height: 100%; }
+.disease-card h3 { color: var(--green-900); margin: 0 0 6px; }
+.disease-card .plant-tag { color: var(--green-500); font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+.search-bar { margin-bottom: 24px; }
+.search-bar input {
+  width: 100%; padding: 12px 16px; border-radius: 999px;
+  border: 1px solid var(--gray-200); font-size: 1rem;
+}
+
+/* ---------- About / Team ---------- */
+.team-list { list-style: none; padding: 0; }
+.team-list li { padding: 8px 0; border-bottom: 1px solid var(--gray-200); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--green-900);
+  color: var(--green-100);
+  text-align: center;
+  padding: 24px 20px;
+  margin-top: 40px;
+}
+.footer-disclaimer { font-size: 0.82rem; color: var(--green-300); margin-top: 6px; }
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.8rem; }
+}

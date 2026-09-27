@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}PlantCare AI{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="{{ url_for('disease.home_page') }}">🌱 <span>PlantCare AI</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="{{ url_for('disease.home_page') }}">Home</a></li>
+        <li><a href="{{ url_for('prediction.detect_page') }}">Detect</a></li>
+        <li><a href="{{ url_for('history.history_page') }}">History</a></li>
+        <li><a href="{{ url_for('disease.library_page') }}">Disease Library</a></li>
+        <li><a href="{{ url_for('disease.about_page') }}">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container page-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>🌱 PlantCare AI &mdash; Intelligent Plant Disease Detection</p>
+      <p class="footer-disclaimer">
+        Educational/research prototype. AI predictions may be uncertain and are not a
+        substitute for professional agricultural diagnosis.
+      </p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

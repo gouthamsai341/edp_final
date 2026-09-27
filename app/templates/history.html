@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Prediction History - PlantCare AI{% endblock %}
+{% block content %}
+<h1 class="section-title">Prediction History</h1>
+<div style="margin-bottom:16px;">
+  <button class="btn btn-secondary" id="clearHistoryBtn">Clear History</button>
+</div>
+<div class="table-wrap card">
+  <table>
+    <thead>
+      <tr><th>Date</th><th>Plant</th><th>Disease</th><th>Confidence</th><th>Status</th></tr>
+    </thead>
+    <tbody id="historyTableBody">
+      <tr><td colspan="5">Loading...</td></tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}
